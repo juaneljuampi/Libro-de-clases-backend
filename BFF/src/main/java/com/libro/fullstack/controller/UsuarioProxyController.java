@@ -25,6 +25,14 @@ public class UsuarioProxyController {
         return usuarioClient.obtenerUsuario(id);
     }
 
+    // BUSCAR ALUMNOS POR CURSO
+    @GetMapping("/curso/{cursoId}")
+    public Object obtenerUsuariosPorCurso(
+            @PathVariable Long cursoId) {
+
+        return usuarioClient.obtenerUsuariosPorCurso(cursoId);
+    }
+
     // CREAR
     @PostMapping
     public Object crearUsuario(@RequestBody Object usuario) {

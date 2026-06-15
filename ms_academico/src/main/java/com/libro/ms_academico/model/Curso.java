@@ -10,10 +10,9 @@ public class Curso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nombre;
     private String descripcion;
-    private String Profesor;
+    private String profesor;
     public Curso() {
     }
 
@@ -21,7 +20,7 @@ public class Curso {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
-        Profesor = profesor;
+        this.profesor = profesor;
     }
 
     public Long getId() {
@@ -49,14 +48,13 @@ public class Curso {
     }
 
     public String getProfesor() {
-        return Profesor;
+        return profesor;
     }
 
     public void setProfesor(String profesor) {
-        Profesor = profesor;
+        this.profesor = profesor;
     }
 
     
-
-    
 }
+   

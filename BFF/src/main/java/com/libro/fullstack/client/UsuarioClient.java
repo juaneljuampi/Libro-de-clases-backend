@@ -30,6 +30,14 @@ public class UsuarioClient {
         );
     }
 
+    // BUSCAR ALUMNOS POR CURSO
+    public Object obtenerUsuariosPorCurso(Long cursoId) {
+        return restTemplate.getForObject(
+                URL + "/curso/" + cursoId,
+                Object.class
+        );
+    }
+
     // CREAR
     public Object crearUsuario(Object usuario) {
         return restTemplate.postForObject(

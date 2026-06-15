@@ -19,6 +19,8 @@ public class Usuario {
 
     private String rol;
 
+    @Column(name = "curso_id")
+    private Long cursoId;
 
 
 
@@ -27,12 +29,13 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(Long id, String nombre, String email, String password, String rol) {
+    public Usuario(Long id, String nombre, String email, String password, String rol, Long cursoId) {
         this.id = id;
         this.nombre = nombre;
         this.email = email;
         this.password = password;
         this.rol = rol;
+        this.cursoId = cursoId;
     }
 
     public Long getId() {
@@ -75,5 +78,11 @@ public class Usuario {
         this.rol = rol;
     }
 
-    // GETTERS Y SETTERS
+    public Long getCursoId() {
+        return cursoId;
+    }
+
+    public void setCursoId(Long cursoId) {
+        this.cursoId = cursoId;
+    }
 }
